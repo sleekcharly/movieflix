@@ -1,0 +1,17 @@
+{
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.matchBrackets": false,
+    "colorize.ignore_search_variables_info": true,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.colorDecorators": false,
+    "editor.detectIndentation": false,
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.glyphMargin": false,
+    "editor.minimap.enabled": false,
+    "editor.snippetSuggestions": "top",
+    "breadcrumbs.enabled": true,
+    "workbench.colorTheme": "Night Owl (No Italics)"
+}
