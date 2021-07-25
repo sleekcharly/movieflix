@@ -28,7 +28,7 @@ export default function Signup() {
         result.user
           .updateProfile({
             displayName: firstName,
-            photoURL: Math.floor(Math.random * 5) + 1
+            photoURL: Math.floor(Math.random() * 5) + 1
           })
           .then(() => {
             history.push(ROUTES.BROWSE);
@@ -74,7 +74,7 @@ export default function Signup() {
             </Form.Submit>
 
             <Form.Text>
-              Already a user? <Form.Link to="/signin">Sign in now.</Form.Link>
+              Already a user? <Form.Link to="/login">Sign in now.</Form.Link>
             </Form.Text>
 
             <Form.TextSmall>
