@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { FirebaseContext } from "../context/firebase";
+import Fuse from "fuse.js";
 import { FooterContainer } from "./footer";
 import { SelectProfileContainer } from "./profiles";
 import { Card, Header, Loading, Player } from "../components";
@@ -25,6 +26,21 @@ export function BrowseContainer({ slides }) {
   useEffect(() => {
     setSlideRows(slides[category]);
   }, [slides, category]);
+
+  // use effet for search functionality
+  useEffect(() => {
+    const fuse = new Fuse(slideRows, {
+      keys: ["data.description", "data.title", "data.genre"]
+    });
+    const results = fuse.search(searchTerm).map(({ item }) => item);
+
+    if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+      setSlideRows(results);
+    } else {
+      setSlideRows(slides[category]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchTerm]);
 
   return profile.displayName ? (
     <>
