@@ -29,7 +29,7 @@ export default function selectionFilter({ series, films }) {
       },
       {
         title: "Thriller",
-        data: films.filter(item => item.genre === "triller")
+        data: films.filter(item => item.genre === "thriller")
       },
       {
         title: "Children",
