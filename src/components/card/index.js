@@ -57,9 +57,8 @@ Card.Meta = function CardMeta({ children, ...restProps }) {
 };
 
 Card.Feature = function CardFeature({ children, category, ...restProps }) {
-  const { showFeature, itemFeature, setShowFeature } = useContext(
-    FeatureContext
-  );
+  const { showFeature, itemFeature, setShowFeature } =
+    useContext(FeatureContext);
 
   return showFeature ? (
     <Feature
@@ -70,7 +69,7 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
         <FeatureTitle>{itemFeature.title}</FeatureTitle>
         <FeatureText>{itemFeature.description}</FeatureText>
         <FeatureClose onClick={() => setShowFeature(false)}>
-          <img src="/images/icons/close.png" alt="close" />
+          <img src="/images/icons/close.png" alt="Close" />
         </FeatureClose>
 
         <Group margin="30px 0" flexDirection="row" alignItems="center">
